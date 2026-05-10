@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yali Tal | Tech & Infrastructure</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #ffffff;
+            --text-main: #1a1c1e;
+            --text-muted: #64748b;
+            --primary: #2563eb;
+            --accent: #f8fafc;
+            --border: #f1f5f9;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg);
+            color: var(--text-main);
+            line-height: 1.7;
+            margin: 0;
+            padding: 80px 20px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Header Section */
+        header {
+            margin-bottom: 100px;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .tagline { 
+            font-size: 0.75rem; 
+            font-weight: 600; 
+            text-transform: uppercase; 
+            letter-spacing: 3px; 
+            color: var(--primary);
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        h1 { 
+            margin: 0; 
+            font-weight: 600; 
+            font-size: 3.5rem; 
+            letter-spacing: -2px; 
+            line-height: 1;
+        }
+
+        header p { 
+            max-width: 600px; 
+            color: var(--text-muted); 
+            font-size: 1.25rem; 
+            margin-top: 25px;
+            font-weight: 300;
+        }
+
+        /* Content Layout */
+        .section {
+            margin-bottom: 80px;
+            animation: fadeIn 1.2s ease-out;
+        }
+
+        h2 {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--text-muted);
+            margin-bottom: 40px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 10px;
+        }
+
+        .entry {
+            margin-bottom: 50px;
+            transition: transform 0.3s ease;
+        }
+
+        .entry-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 8px;
+        }
+
+        .entry-title { 
+            font-weight: 600; 
+            font-size: 1.2rem; 
+            color: var(--text-main); 
+        }
+
+        .entry-meta { 
+            font-size: 0.85rem; 
+            color: var(--primary); 
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .entry-content { 
+            color: var(--text-muted); 
+            font-size: 1rem; 
+            max-width: 650px;
+        }
+
+        /* Tech Stack / Skills */
+        .skill-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 15px;
+        }
+
+        .skill-item {
+            font-size: 0.85rem;
+            padding: 10px;
+            background: var(--accent);
+            border-radius: 4px;
+            text-align: center;
+            color: var(--text-muted);
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        /* Refined Contact Form */
+        .contact-area {
+            background: var(--accent);
+            padding: 50px;
+            border-radius: 24px;
+            margin-top: 100px;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            border: none;
+            border-bottom: 1px solid #cbd5e1;
+            background: transparent;
+            font-family: inherit;
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .contact-form input:focus, .contact-form textarea:focus {
+            border-bottom-color: var(--primary);
+        }
+
+        button {
+            background: var(--text-main);
+            color: white;
+            border: none;
+            padding: 18px 40px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+        }
+
+        button:hover {
+            background: var(--primary);
+            transform: scale(1.02);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 2.5rem; }
+            .entry-header { flex-direction: column; }
+            .contact-area { padding: 30px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <span class="tagline">Infrastructure & Electronics</span>
+            <h1>Yali Tal</h1>
+            <p>A builder at heart. Currently navigating the intersection of hardware modding, network defense, and self-hosted systems.</p>
+        </header>
+
+        <div class="section">
+            <h2>Experience</h2>
+            
+            <div class="entry">
+                <div class="entry-header">
+                    <span class="entry-title">Cyber Security Analyst (SOC)</span>
+                    <span class="entry-meta">IDF Military Service</span>
+                </div>
+                <p class="entry-content">Focused on real-time network monitoring and digital infrastructure defense. Developing a disciplined approach to incident response and vulnerability management.</p>
+            </div>
+
+            <div class="entry">
+                <div class="entry-header">
+                    <span class="entry-title">Service & Operations</span>
+                    <span class="entry-meta">Niro Cafe | 2022 — 2024</span>
+                </div>
+                <p class="entry-content">Honed the ability to manage high-pressure environments and communicate technical efficiency to a diverse range of people.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Core Projects</h2>
+            
+            <div class="entry">
+                <div class="entry-header">
+                    <span class="entry-title">The NFC Jukebox</span>
+                    <span class="entry-meta">IoT / ESP32</span>
+                </div>
+                <p class="entry-content">A physical-to-digital interface using RC522 sensors to bridge Spotify playback with tangible media. Built with ESPHome and Home Assistant.</p>
+            </div>
+
+            <div class="entry">
+                <div class="entry-header">
+                    <span class="entry-title">Homelab Architecture</span>
+                    <span class="entry-meta">Linux / Docker</span>
+                </div>
+                <p class="entry-content">Maintaining a private cloud infrastructure. Deploying containerized services like Immich and AdGuard Home for optimized network performance.</p>
+            </div>
+
+            <div class="entry">
+                <div class="entry-header">
+                    <span class="entry-title">Horology & Modding</span>
+                    <span class="entry-meta">Hardware Precision</span>
+                </div>
+                <p class="entry-content">Custom assembly and regulation of NH35 mechanical movements. A pursuit of precision that mirrors my approach to electronics repair.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Tech Stack</h2>
+            <div class="skill-grid">
+                <div class="skill-item">Ubuntu Server</div>
+                <div class="skill-item">Docker</div>
+                <div class="skill-item">ESPHome</div>
+                <div class="skill-item">PC Assembly</div>
+                <div class="skill-item">Soldering</div>
+                <div class="skill-item">Hebrew (N)</div>
+                <div class="skill-item">English (F)</div>
+            </div>
+        </div>
+
+        <div class="contact-area">
+            <h2 style="border:none; margin-bottom: 20px; color: var(--text-main);">Connection</h2>
+            <form class="contact-form" method="post">
+                {% csrf_token %}
+                <input type="text" name="name" placeholder="Name" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <textarea name="message" rows="1" placeholder="Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

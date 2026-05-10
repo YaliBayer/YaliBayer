@@ -1,0 +1,14 @@
+services:
+  web:
+    image: python:3.11-slim
+    container_name: django_resume
+    restart: unless-stopped
+    volumes:
+      - .:/code
+    working_dir: /code
+    ports:
+      - "8000:8000"
+    command: >
+      sh -c "pip install django && 
+             python manage.py migrate --noinput && 
+             python manage.py runserver 100.79.190.51:8000"
