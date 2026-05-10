@@ -1,265 +1,583 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yali Bayer | Tech & Infrastructure</title>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600&family=JetBrains+Mono&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --bg: #ffffff;
-            --text-main: #1a1c1e;
-            --text-muted: #64748b;
-            --primary: #2563eb;
-            --accent: #f8fafc;
-            --border: #f1f5f9;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yali Tal | Infrastructure & Electronics</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f5f3ef;
+      --surface: #edeae4;
+      --surface-2: #e4e1da;
+      --text: #1c1b18;
+      --muted: #7a7568;
+      --faint: #b0ab9f;
+      --accent: #2b4bff;
+      --border: rgba(28,27,24,0.1);
+      --radius: 12px;
+    }
 
-        * { box-sizing: border-box; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
-        body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: var(--bg);
-            color: var(--text-main);
-            line-height: 1.7;
-            margin: 0;
-            padding: 80px 20px;
-            -webkit-font-smoothing: antialiased;
-        }
+    html { scroll-behavior: smooth; }
 
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
 
-        /* Header Section */
-        header {
-            margin-bottom: 100px;
-            animation: fadeIn 1s ease-out;
-        }
+    /* ─── Layout ─── */
+    .container {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 0 28px;
+    }
 
-        .tagline { 
-            font-size: 0.75rem; 
-            font-weight: 600; 
-            text-transform: uppercase; 
-            letter-spacing: 3px; 
-            color: var(--primary);
-            margin-bottom: 15px;
-            display: block;
-        }
+    /* ─── Hero ─── */
+    header {
+      padding: 90px 0 70px;
+      opacity: 0;
+      transform: translateY(24px);
+      animation: rise 0.9s ease forwards 0.1s;
+    }
 
-        h1 { 
-            margin: 0; 
-            font-weight: 600; 
-            font-size: 3.5rem; 
-            letter-spacing: -2px; 
-            line-height: 1;
-        }
+    .eyebrow {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .eyebrow::before {
+      content: '';
+      display: inline-block;
+      width: 24px;
+      height: 1px;
+      background: var(--faint);
+    }
 
-        header p { 
-            max-width: 600px; 
-            color: var(--text-muted); 
-            font-size: 1.25rem; 
-            margin-top: 25px;
-            font-weight: 300;
-        }
+    h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(52px, 9vw, 88px);
+      line-height: 0.95;
+      letter-spacing: -2px;
+      color: var(--text);
+      margin-bottom: 28px;
+    }
 
-        /* Content Layout */
-        .section {
-            margin-bottom: 80px;
-            animation: fadeIn 1.2s ease-out;
-        }
+    .bio {
+      font-size: 17px;
+      color: var(--muted);
+      max-width: 500px;
+      line-height: 1.75;
+      font-weight: 300;
+    }
 
-        h2 {
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: var(--text-muted);
-            margin-bottom: 40px;
-            border-bottom: 1px solid var(--border);
-            padding-bottom: 10px;
-        }
+    .age-note {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      margin-top: 18px;
+      font-size: 12px;
+      font-family: 'DM Mono', monospace;
+      color: var(--faint);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 40px;
+      padding: 5px 14px;
+    }
+    .age-dot {
+      width: 6px; height: 6px;
+      background: var(--accent);
+      border-radius: 50%;
+      animation: pulse 2s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(0.75); }
+    }
 
-        .entry {
-            margin-bottom: 50px;
-            transition: transform 0.3s ease;
-        }
+    /* ─── Terminal ─── */
+    .terminal {
+      margin: 0 0 70px;
+      background: var(--text);
+      border-radius: var(--radius);
+      overflow: hidden;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: rise 0.9s ease forwards 0.35s;
+    }
 
-        .entry-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            margin-bottom: 8px;
-        }
+    .term-bar {
+      padding: 12px 16px;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+    .dot { width: 11px; height: 11px; border-radius: 50%; }
+    .dot-r { background: #ff5f57; }
+    .dot-y { background: #febc2e; }
+    .dot-g { background: #28c840; }
+    .term-title {
+      margin-left: auto;
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      color: rgba(255,255,255,0.25);
+    }
 
-        .entry-title { 
-            font-weight: 600; 
-            font-size: 1.2rem; 
-            color: var(--text-main); 
-        }
+    .term-body {
+      padding: 20px 22px 24px;
+      font-family: 'DM Mono', monospace;
+      font-size: 13px;
+      min-height: 68px;
+    }
+    .term-prompt { color: rgba(255,255,255,0.3); }
+    .term-cmd { color: #c8ff90; }
+    .term-out { color: rgba(255,255,255,0.5); margin-top: 6px; white-space: pre; display: none; }
+    .cursor {
+      display: inline-block;
+      width: 7px; height: 14px;
+      background: #c8ff90;
+      vertical-align: -2px;
+      animation: blink 1.1s step-end infinite;
+    }
+    @keyframes blink { 50% { opacity: 0; } }
 
-        .entry-meta { 
-            font-size: 0.85rem; 
-            color: var(--primary); 
-            font-family: 'JetBrains Mono', monospace;
-        }
+    /* ─── Sections ─── */
+    .section {
+      margin-bottom: 70px;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .section.visible { opacity: 1; transform: translateY(0); }
 
-        .entry-content { 
-            color: var(--text-muted); 
-            font-size: 1rem; 
-            max-width: 650px;
-        }
+    .section-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--faint);
+      margin-bottom: 28px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .section-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
 
-        /* Tech Stack / Skills */
-        .skill-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-            gap: 15px;
-        }
+    /* ─── Entries ─── */
+    .entry {
+      padding: 20px 0;
+      border-bottom: 1px solid var(--border);
+      cursor: default;
+    }
+    .entry:first-of-type { border-top: 1px solid var(--border); }
 
-        .skill-item {
-            font-size: 0.85rem;
-            padding: 10px;
-            background: var(--accent);
-            border-radius: 4px;
-            text-align: center;
-            color: var(--text-muted);
-            font-family: 'JetBrains Mono', monospace;
-        }
+    .entry-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .entry-title {
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .entry-title svg { flex-shrink: 0; color: var(--muted); }
 
-        /* Refined Contact Form */
-        .contact-area {
-            background: var(--accent);
-            padding: 50px;
-            border-radius: 24px;
-            margin-top: 100px;
-        }
+    .tag {
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      color: var(--muted);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 3px 8px;
+      white-space: nowrap;
+    }
 
-        .contact-form input, .contact-form textarea {
-            width: 100%;
-            padding: 15px 0;
-            margin-bottom: 30px;
-            border: none;
-            border-bottom: 1px solid #cbd5e1;
-            background: transparent;
-            font-family: inherit;
-            font-size: 1rem;
-            outline: none;
-            transition: border-color 0.3s;
-        }
+    .entry-body {
+      font-size: 14px;
+      color: var(--muted);
+      max-width: 580px;
+      margin-top: 6px;
+      line-height: 1.7;
+      font-weight: 300;
+    }
 
-        .contact-form input:focus, .contact-form textarea:focus {
-            border-bottom-color: var(--primary);
-        }
+    /* Expandable project detail */
+    .project-entry { cursor: pointer; }
+    .project-entry .expand-hint {
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      color: var(--faint);
+      margin-top: 6px;
+      transition: color 0.2s;
+    }
+    .project-entry:hover .expand-hint { color: var(--muted); }
+    .project-entry:hover .entry-title { color: var(--accent); }
+    .project-entry .entry-title { transition: color 0.2s; }
 
-        button {
-            background: var(--text-main);
-            color: white;
-            border: none;
-            padding: 18px 40px;
-            border-radius: 50px;
-            cursor: pointer;
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: all 0.3s;
-        }
+    .detail-panel {
+      display: none;
+      margin-top: 12px;
+      padding: 14px 16px;
+      background: var(--surface);
+      border-radius: 8px;
+      border-left: 2px solid var(--accent);
+    }
+    .detail-panel p {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.75;
+      font-weight: 300;
+    }
+    .detail-panel.open { display: block; }
 
-        button:hover {
-            background: var(--primary);
-            transform: scale(1.02);
-        }
+    /* ─── Stack pills ─── */
+    .pill-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .pill {
+      font-family: 'DM Mono', monospace;
+      font-size: 12px;
+      color: var(--muted);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 40px;
+      padding: 6px 14px;
+      transition: background 0.2s, color 0.2s, border-color 0.2s;
+      cursor: default;
+    }
+    .pill:hover {
+      background: var(--text);
+      color: var(--bg);
+      border-color: var(--text);
+    }
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
+    /* ─── Honesty card ─── */
+    .honesty-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 22px 24px;
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      margin-top: 32px;
+    }
+    .honesty-icon {
+      flex-shrink: 0;
+      width: 32px; height: 32px;
+      background: var(--surface-2);
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .honesty-text { font-size: 14px; color: var(--muted); line-height: 1.7; font-weight: 300; }
+    .honesty-text strong { color: var(--text); font-weight: 500; }
 
-        @media (max-width: 600px) {
-            h1 { font-size: 2.5rem; }
-            .entry-header { flex-direction: column; }
-            .contact-area { padding: 30px; }
-        }
-    </style>
+    /* ─── Contact ─── */
+    .contact-block {
+      background: var(--text);
+      border-radius: var(--radius);
+      padding: 36px 32px;
+      margin-bottom: 80px;
+    }
+    .contact-block .section-label { color: rgba(255,255,255,0.3); }
+    .contact-block .section-label::after { background: rgba(255,255,255,0.08); }
+    .contact-lead {
+      font-size: 15px;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 24px;
+      max-width: 420px;
+      font-weight: 300;
+      line-height: 1.7;
+    }
+
+    .contact-form { display: flex; flex-direction: column; gap: 0; }
+    .form-field {
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      padding: 14px 0;
+      transition: border-color 0.3s;
+    }
+    .form-field:focus-within { border-color: rgba(255,255,255,0.3); }
+    .form-field input,
+    .form-field textarea {
+      width: 100%;
+      background: transparent;
+      border: none;
+      outline: none;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 15px;
+      font-weight: 300;
+      color: #fff;
+      resize: none;
+    }
+    .form-field input::placeholder,
+    .form-field textarea::placeholder {
+      color: rgba(255,255,255,0.25);
+    }
+
+    .send-btn {
+      margin-top: 28px;
+      align-self: flex-start;
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      border-radius: 40px;
+      padding: 13px 32px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: opacity 0.2s, transform 0.2s;
+      letter-spacing: 0.2px;
+    }
+    .send-btn:hover { opacity: 0.85; transform: scale(1.02); }
+
+    /* ─── Footer ─── */
+    footer {
+      text-align: center;
+      padding: 24px 0 48px;
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      color: var(--faint);
+    }
+
+    /* ─── Animation ─── */
+    @keyframes rise {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ─── Mobile ─── */
+    @media (max-width: 600px) {
+      header { padding: 60px 0 50px; }
+      h1 { letter-spacing: -1px; }
+      .contact-block { padding: 28px 20px; }
+      .entry-top { flex-direction: column; gap: 6px; }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <span class="tagline">Infrastructure & Electronics</span>
-            <h1>Yali Tal</h1>
-            <p>A builder at heart. Currently navigating the intersection of hardware modding, network defense, and self-hosted systems.</p>
-        </header>
 
-        <div class="section">
-            <h2>Experience</h2>
-            
-            <div class="entry">
-                <div class="entry-header">
-                    <span class="entry-title">Cyber Security Analyst (SOC)</span>
-                    <span class="entry-meta">IDF Military Service</span>
-                </div>
-                <p class="entry-content">Focused on real-time network monitoring and digital infrastructure defense. Developing a disciplined approach to incident response and vulnerability management.</p>
-            </div>
+<div class="container">
 
-            <div class="entry">
-                <div class="entry-header">
-                    <span class="entry-title">Service & Operations</span>
-                    <span class="entry-meta">Niro Cafe | 2022 — 2024</span>
-                </div>
-                <p class="entry-content">Honed the ability to manage high-pressure environments and communicate technical efficiency to a diverse range of people.</p>
-            </div>
-        </div>
+  <!-- Hero -->
+  <header>
+    <p class="eyebrow">Infrastructure & Electronics</p>
+    <h1>Yali Tal</h1>
+    <p class="bio">A builder at heart. Navigating the intersection of hardware modding, network defense, and self-hosted systems.</p>
+    <span class="age-note"><span class="age-dot"></span>20 years old &middot; still learning &middot; honest about it</span>
+  </header>
 
-        <div class="section">
-            <h2>Core Projects</h2>
-            
-            <div class="entry">
-                <div class="entry-header">
-                    <span class="entry-title">The NFC Jukebox</span>
-                    <span class="entry-meta">IoT / ESP32</span>
-                </div>
-                <p class="entry-content">A physical-to-digital interface using RC522 sensors to bridge Spotify playback with tangible media. Built with ESPHome and Home Assistant.</p>
-            </div>
-
-            <div class="entry">
-                <div class="entry-header">
-                    <span class="entry-title">Homelab Architecture</span>
-                    <span class="entry-meta">Linux / Docker</span>
-                </div>
-                <p class="entry-content">Maintaining a private cloud infrastructure. Deploying containerized services like Immich and AdGuard Home for optimized network performance.</p>
-            </div>
-
-            <div class="entry">
-                <div class="entry-header">
-                    <span class="entry-title">Horology & Modding</span>
-                    <span class="entry-meta">Hardware Precision</span>
-                </div>
-                <p class="entry-content">Custom assembly and regulation of NH35 mechanical movements. A pursuit of precision that mirrors my approach to electronics repair.</p>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>Tech Stack</h2>
-            <div class="skill-grid">
-                <div class="skill-item">Ubuntu Server</div>
-                <div class="skill-item">Docker</div>
-                <div class="skill-item">ESPHome</div>
-                <div class="skill-item">PC Assembly</div>
-                <div class="skill-item">Soldering</div>
-                <div class="skill-item">Hebrew (N)</div>
-                <div class="skill-item">English (F)</div>
-            </div>
-        </div>
-
-        <div class="contact-area">
-            <h2 style="border:none; margin-bottom: 20px; color: var(--text-main);">Connection</h2>
-            <form class="contact-form" method="post">
-                {% csrf_token %}
-                <input type="text" name="name" placeholder="Name" required>
-                <input type="email" name="email" placeholder="Email" required>
-                <textarea name="message" rows="1" placeholder="Message" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
-        </div>
+  <!-- Terminal -->
+  <div class="terminal">
+    <div class="term-bar">
+      <span class="dot dot-r"></span>
+      <span class="dot dot-y"></span>
+      <span class="dot dot-g"></span>
+      <span class="term-title">yali@homelab — bash</span>
     </div>
+    <div class="term-body">
+      <span class="term-prompt">yali@homelab:~$ </span><span class="term-cmd" id="typed-cmd"></span><span class="cursor" id="cur"></span>
+      <div class="term-out" id="term-out"></div>
+    </div>
+  </div>
+
+  <!-- Experience -->
+  <div class="section" id="s-exp">
+    <p class="section-label">Experience</p>
+
+    <div class="entry">
+      <div class="entry-top">
+        <span class="entry-title">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Cyber Security Analyst (SOC)
+        </span>
+        <span class="tag">IDF · ongoing</span>
+      </div>
+      <p class="entry-body">Real-time network monitoring and digital infrastructure defense. Learning discipline the hard way — incident response at 2am hits different than a textbook.</p>
+    </div>
+
+    <div class="entry">
+      <div class="entry-top">
+        <span class="entry-title">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+          Service & Operations
+        </span>
+        <span class="tag">Niro Cafe · 2022–2024</span>
+      </div>
+      <p class="entry-body">Running a busy café floor teaches you to stay calm when everything goes sideways at once. Turns out that's a useful skill everywhere else too.</p>
+    </div>
+  </div>
+
+  <!-- Projects -->
+  <div class="section" id="s-proj">
+    <p class="section-label">Projects</p>
+
+    <div class="entry project-entry" onclick="toggleDetail('nfc')">
+      <div class="entry-top">
+        <span class="entry-title">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+          The NFC Jukebox
+        </span>
+        <span class="tag">ESP32 / IoT</span>
+      </div>
+      <p class="entry-body">Tap a card, play an album. Physical media for the streaming age — RC522 reader → ESPHome → Home Assistant → Spotify.</p>
+      <p class="expand-hint">↓ tap for details</p>
+      <div class="detail-panel" id="nfc-detail">
+        <p>Built this because I wanted physical interaction with music. Each NFC card is tied to a Spotify URI. Tap → MQTT event → automation triggers playback. The satisfying part is that it <em>feels</em> like putting a record on. Currently have about 12 cards — one per album I actually care about.</p>
+      </div>
+    </div>
+
+    <div class="entry project-entry" onclick="toggleDetail('hl')">
+      <div class="entry-top">
+        <span class="entry-title">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+          Homelab Architecture
+        </span>
+        <span class="tag">Linux / Docker</span>
+      </div>
+      <p class="entry-body">Private cloud at home. Immich for photos, AdGuard for DNS, containerised everything. Breaks more than I'd like. I learn every time it does.</p>
+      <p class="expand-hint">↓ tap for details</p>
+      <div class="detail-panel" id="hl-detail">
+        <p>Ubuntu Server + Docker Compose stack. The philosophy: if I can't explain how it works, I haven't earned the right to run it. Still working on a few services in that regard. Next up: proper Traefik reverse proxy and automated off-site backups.</p>
+      </div>
+    </div>
+
+    <div class="entry project-entry" onclick="toggleDetail('watch')">
+      <div class="entry-top">
+        <span class="entry-title">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="7"/><polyline points="12 9 12 12 13.5 13.5"/><path d="M16.51 17.35l-.35 3.83a2 2 0 0 1-2 1.82H9.83a2 2 0 0 1-2-1.82l-.35-3.83m.01-10.7l.35-3.83A2 2 0 0 1 9.83 1h4.35a2 2 0 0 1 2 1.82l.35 3.83"/></svg>
+          Horology & Modding
+        </span>
+        <span class="tag">Hardware precision</span>
+      </div>
+      <p class="entry-body">Custom NH35 movement assembly and regulation. Patience-intensive, tolerance-unforgiving. Good practice for electronics work generally.</p>
+      <p class="expand-hint">↓ tap for details</p>
+      <div class="detail-panel" id="watch-detail">
+        <p>The movement inside a watch operates at tolerances in microns. Working with that trains your hands — and your attention — in ways that carry directly into soldering and PCB work. Currently regulating a modified Seiko to ±3 sec/day.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Stack -->
+  <div class="section" id="s-stack">
+    <p class="section-label">Stack</p>
+    <div class="pill-grid">
+      <span class="pill">Ubuntu Server</span>
+      <span class="pill">Docker</span>
+      <span class="pill">ESPHome</span>
+      <span class="pill">Home Assistant</span>
+      <span class="pill">PC Assembly</span>
+      <span class="pill">Soldering</span>
+      <span class="pill">Hebrew (native)</span>
+      <span class="pill">English (fluent)</span>
+    </div>
+
+    <div class="honesty-card">
+      <div class="honesty-icon">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--muted)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+      </div>
+      <p class="honesty-text"><strong>A note on experience.</strong> I'm 20, a year into my military service, and aware there's a lot I don't know yet. What I can offer: genuine curiosity, the habit of taking things apart to understand them, and the willingness to be wrong and try again.</p>
+    </div>
+  </div>
+
+  <!-- Contact -->
+  <div class="contact-block section" id="s-contact">
+    <p class="section-label">Say hello</p>
+    <p class="contact-lead">Whether you're building something interesting or just want to talk hardware — I'm around.</p>
+    <form class="contact-form" method="post" action="">
+      {% csrf_token %}
+      <div class="form-field">
+        <input type="text" name="name" placeholder="Name" required autocomplete="off">
+      </div>
+      <div class="form-field">
+        <input type="email" name="email" placeholder="Email" required autocomplete="off">
+      </div>
+      <div class="form-field">
+        <textarea name="message" rows="3" placeholder="Message" required></textarea>
+      </div>
+      <button type="submit" class="send-btn">Send message →</button>
+    </form>
+  </div>
+
+  <footer>
+    built with curiosity &nbsp;·&nbsp; yali tal &nbsp;·&nbsp; jerusalem
+  </footer>
+
+</div>
+
+<script>
+  // ── Terminal typewriter ──
+  const lines = [
+    { cmd: 'uptime', out: ' 11:42:03 up 47 days, 3:19,  load: 0.08, 0.12, 0.10' },
+    { cmd: 'docker ps --format "{{.Names}}"', out: ' immich\n adguard-home\n home-assistant\n portainer' },
+    { cmd: 'cat /etc/motd', out: " still learning. that's the point." },
+  ];
+
+  let li = 0, ci = 0, typing = true;
+  const cmdEl = document.getElementById('typed-cmd');
+  const outEl = document.getElementById('term-out');
+
+  function typeLoop() {
+    const line = lines[li];
+    if (typing) {
+      if (ci <= line.cmd.length) {
+        cmdEl.textContent = line.cmd.slice(0, ci++);
+        setTimeout(typeLoop, 65 + Math.random() * 40);
+      } else {
+        typing = false;
+        outEl.style.display = 'block';
+        outEl.textContent = line.out;
+        setTimeout(() => {
+          cmdEl.textContent = '';
+          outEl.style.display = 'none';
+          ci = 0; typing = true;
+          li = (li + 1) % lines.length;
+          typeLoop();
+        }, 2800);
+      }
+    }
+  }
+  typeLoop();
+
+  // ── Project detail toggle ──
+  function toggleDetail(id) {
+    const panel = document.getElementById(id + '-detail');
+    panel.classList.toggle('open');
+    const hint = panel.previousElementSibling;
+    hint.textContent = panel.classList.contains('open') ? '↑ collapse' : '↓ tap for details';
+  }
+
+  // ── Scroll reveal ──
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.section').forEach(el => observer.observe(el));
+</script>
 </body>
 </html>
