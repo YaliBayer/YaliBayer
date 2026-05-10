@@ -139,11 +139,12 @@
       padding: 20px 22px 24px;
       font-family: 'DM Mono', monospace;
       font-size: 13px;
-      min-height: 68px;
+      height: 90px;
+      overflow: hidden;
     }
     .term-prompt { color: rgba(255,255,255,0.3); }
     .term-cmd { color: #c8ff90; }
-    .term-out { color: rgba(255,255,255,0.5); margin-top: 6px; white-space: pre; display: none; }
+    .term-out { color: rgba(255,255,255,0.5); margin-top: 6px; white-space: pre; visibility: hidden; }
     .cursor {
       display: inline-block;
       width: 7px; height: 14px;
@@ -550,11 +551,12 @@
         setTimeout(typeLoop, 65 + Math.random() * 40);
       } else {
         typing = false;
-        outEl.style.display = 'block';
+        outEl.style.visibility = 'visible';
         outEl.textContent = line.out;
         setTimeout(() => {
           cmdEl.textContent = '';
-          outEl.style.display = 'none';
+          outEl.style.visibility = 'hidden';
+          outEl.textContent = '';
           ci = 0; typing = true;
           li = (li + 1) % lines.length;
           typeLoop();
