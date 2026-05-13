@@ -1,5 +1,23 @@
-from django.shortcuts import render, redirect
+from django.conf import settings
+from django.http import FileResponse, Http404
+from django.shortcuts import render
+
 from .models import ContactMessage
+
+
+def download_resume(request):
+    file_path = settings.RESUME_PDF_PATH
+
+    if not file_path.exists():
+        raise Http404("Resume file not found.")
+
+    return FileResponse(
+        file_path.open('rb'),
+        as_attachment=True,
+        filename='Yali_Tal_Resume.pdf',
+        content_type='application/pdf',
+    )
+
 
 def resume_view(request):
     if request.method == "POST":
