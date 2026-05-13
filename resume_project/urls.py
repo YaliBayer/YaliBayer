@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.urls import path
 from core.views import resume_view
-from resume import views
+from core import views
 
 
 urlpatterns = [
