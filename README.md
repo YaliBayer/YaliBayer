@@ -86,6 +86,5 @@ http://127.0.0.1:8000/download_resume/
 
 <div align="center">
 
-built with curiosity · Jerusalem
-
+built with curiosity
 </div>
