@@ -7,6 +7,6 @@ from core import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', resume_view, name='home'),
-    path('download-resume/', views.download_resume, name='download_resume'),
+    path('download_resume/', views.download_resume, name='download_resume'),
 
 ]
