@@ -15,8 +15,6 @@ Navigating the intersection of hardware modding, network defense, and self-hoste
 <a href="https://www.yali.website"><strong>Website</strong></a>
 &nbsp;&nbsp;·&nbsp;&nbsp;
 <a href="https://www.yali.website/download_resume/"><strong>Live PDF</strong></a>
-&nbsp;&nbsp;·&nbsp;&nbsp;
-
 
 <br />
 <br />
