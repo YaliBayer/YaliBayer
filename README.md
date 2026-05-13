@@ -1,72 +1,122 @@
 <div align="center">
 
-<p><strong>Infrastructure & Electronics</strong></p>
+<img src="https://capsule-render.vercel.app/api?type=waving&height=220&color=0:1c1b18,100:2b4bff&text=Yali%20Tal&fontColor=f5f3ef&fontSize=58&fontAlignY=38&desc=Infrastructure%20%26%20Electronics&descAlignY=58&descSize=18" alt="Yali Tal - Infrastructure and Electronics" width="100%" />
 
-# Yali Tal
+<br />
 
-Builder at heart. Navigating the intersection of hardware modding, network defense, and self-hosted systems.
+<a href="https://www.yali.website">
+  <img src="https://img.shields.io/badge/website-yali.website-2b4bff?style=for-the-badge&labelColor=1c1b18" alt="Website" />
+</a>
+<a href="https://www.yali.website/download_resume/">
+  <img src="https://img.shields.io/badge/download-live_pdf-f5f3ef?style=for-the-badge&labelColor=1c1b18&color=7a7568" alt="Download live PDF" />
+</a>
+<img src="https://img.shields.io/badge/built_with-Django-0C4B33?style=for-the-badge&labelColor=1c1b18" alt="Built with Django" />
+<img src="https://img.shields.io/badge/deployed_on-Vercel-000000?style=for-the-badge&labelColor=1c1b18" alt="Deployed on Vercel" />
 
-[Visit the Website](https://www.yali.website) · [Download the Live PDF](https://www.yali.website/download_resume/)
+<br />
+<br />
+
+<strong>A builder at heart.</strong><br />
+Navigating the intersection of hardware modding, network defense, and self-hosted systems.
 
 </div>
 
 ---
 
+## Snapshot
+
+```text
+yali@homelab:~$ whoami
+Infrastructure-minded builder, SOC analyst, hardware tinkerer.
+
+yali@homelab:~$ current-focus
+Network defense | Linux servers | Docker | ESPHome | practical electronics
+
+yali@homelab:~$ philosophy
+If I cannot explain how it works, I have not earned the right to run it.
+```
+
 ## Experience
 
-### Cyber Security Analyst (SOC)
-
-`IDF · ongoing`
-
-Serving as a Junior Analyst within a military Security Operations Center. My role focuses on real-time network monitoring, identifying system vulnerabilities, and maintaining the integrity of digital infrastructure. This service has taught me operational discipline, rapid incident response, and the technical why behind network defense.
-
-### Service & Operations
-
-`Niro Cafe · 2022-2024`
-
-Running a busy cafe floor teaches you to stay calm when everything goes sideways at once. Turns out that is a useful skill everywhere else too.
-
----
+<table>
+  <tr>
+    <td width="28%"><strong>Cyber Security Analyst</strong><br /><sub>IDF · ongoing</sub></td>
+    <td>
+      Junior SOC analyst focused on real-time network monitoring, vulnerability identification,
+      and maintaining digital infrastructure integrity. The work has sharpened my operational
+      discipline, incident response instincts, and understanding of the technical why behind defense.
+    </td>
+  </tr>
+  <tr>
+    <td><strong>Service & Operations</strong><br /><sub>Niro Cafe · 2022-2024</sub></td>
+    <td>
+      Running a busy cafe floor taught me to stay calm when everything goes sideways at once.
+      Turns out that skill travels well.
+    </td>
+  </tr>
+</table>
 
 ## Projects
 
-### The NFC Jukebox
-
-`ESP32 / IoT`
-
-Tap a card, play an album. Physical media for the streaming age: RC522 reader, ESPHome, Home Assistant, MQTT, and Spotify automation.
-
-### Homelab Architecture
-
-`Linux / Docker`
-
-Private cloud at home. Immich for photos, AdGuard for DNS, containerised everything. Breaks more than I would like. I learn every time it does.
-
-### Horology & Modding
-
-`Hardware precision`
-
-Custom NH35 movement assembly and regulation. Patience-intensive, tolerance-unforgiving, and good practice for electronics work generally.
-
----
+<table>
+  <tr>
+    <td width="33%">
+      <h3>The NFC Jukebox</h3>
+      <p><code>ESP32 / IoT</code></p>
+      <p>Tap a card, play an album. RC522 reader, ESPHome, Home Assistant, MQTT, and Spotify automation.</p>
+    </td>
+    <td width="33%">
+      <h3>Homelab Architecture</h3>
+      <p><code>Linux / Docker</code></p>
+      <p>Private cloud at home: Immich, AdGuard, containerised services, and a lot of learning through breakage.</p>
+    </td>
+    <td width="33%">
+      <h3>Horology & Modding</h3>
+      <p><code>Hardware precision</code></p>
+      <p>Custom NH35 movement assembly and regulation. Tiny tolerances, patient hands, practical electronics mindset.</p>
+    </td>
+  </tr>
+</table>
 
 ## Stack
 
-`Ubuntu Server` `Docker` `ESPHome` `Home Assistant` `PC Assembly` `Soldering` `Hebrew` `English`
+<p>
+  <img src="https://img.shields.io/badge/Ubuntu_Server-E95420?style=flat-square&logo=ubuntu&logoColor=white" alt="Ubuntu Server" />
+  <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" alt="Docker" />
+  <img src="https://img.shields.io/badge/ESPHome-000000?style=flat-square&logo=esphome&logoColor=white" alt="ESPHome" />
+  <img src="https://img.shields.io/badge/Home_Assistant-41BDF5?style=flat-square&logo=homeassistant&logoColor=white" alt="Home Assistant" />
+  <img src="https://img.shields.io/badge/Django-092E20?style=flat-square&logo=django&logoColor=white" alt="Django" />
+  <img src="https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white" alt="Vercel" />
+  <img src="https://img.shields.io/badge/PC_Assembly-2b4bff?style=flat-square" alt="PC Assembly" />
+  <img src="https://img.shields.io/badge/Soldering-7a7568?style=flat-square" alt="Soldering" />
+</p>
 
----
+## How The Resume PDF Works
 
-## About This Site
+The download endpoint does not serve a stale file. It renders the website template, extracts the resume content, and generates a styled PDF on demand.
 
-This repository powers my personal resume website, built with Django and deployed on Vercel.
-
-The PDF download is generated dynamically from the website template. That means when the resume content changes on the site, the next PDF download is generated from the updated page instead of serving an old static file.
-
-```text
-Website template  ->  resume content parser  ->  styled PDF generator  ->  download
+```mermaid
+flowchart LR
+    A[resume.html] --> B[content parser]
+    B --> C[PDF layout engine]
+    C --> D[/download_resume/]
+    D --> E[Fresh PDF]
 ```
 
-### Local Development
+## Repository Map
+
+```text
+core/
+  templates/resume.html   website resume content
+  views.py                homepage and download route
+  pdf.py                  dynamic styled PDF generator
+resume_project/
+  settings.py             Django settings
+  urls.py                 URL routes
+vercel.json               Vercel deployment config
+```
+
+## Local Development
 
 ```bash
 python3 -m venv .venv
@@ -75,7 +125,7 @@ pip install -r requirements.txt
 python manage.py runserver
 ```
 
-Then open:
+Open:
 
 ```text
 http://127.0.0.1:8000/
@@ -86,5 +136,11 @@ http://127.0.0.1:8000/download_resume/
 
 <div align="center">
 
-built with curiosity
+<sub>built with curiosity</sub>
+
+<br />
+<br />
+
+<img src="https://capsule-render.vercel.app/api?type=waving&height=90&section=footer&color=0:2b4bff,100:1c1b18" alt="" width="100%" />
+
 </div>
