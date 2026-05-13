@@ -1,18 +1,19 @@
-from django.conf import settings
-from django.http import FileResponse, Http404
+from io import BytesIO
+
+from django.http import FileResponse
 from django.shortcuts import render
+from django.template.loader import render_to_string
 
 from .models import ContactMessage
+from .pdf import build_resume_pdf
 
 
 def download_resume(request):
-    file_path = settings.RESUME_PDF_PATH
-
-    if not file_path.exists():
-        raise Http404("Resume file not found.")
+    resume_html = render_to_string('resume.html', request=request)
+    pdf_file = BytesIO(build_resume_pdf(resume_html))
 
     return FileResponse(
-        file_path.open('rb'),
+        pdf_file,
         as_attachment=True,
         filename='Yali_Tal_Resume.pdf',
         content_type='application/pdf',
