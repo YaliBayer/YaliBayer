@@ -1,17 +1,17 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&height=220&color=0:1c1b18,100:2b4bff&text=Yali%20Tal&fontColor=f5f3ef&fontSize=58&fontAlignY=38&desc=Infrastructure%20%26%20Electronics&descAlignY=58&descSize=18" alt="Yali Tal - Infrastructure and Electronics" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=waving&amp;height=220&amp;color=0:1c1b18,100:2b4bff&amp;text=Yali%20Tal&amp;fontColor=f5f3ef&amp;fontSize=58&amp;fontAlignY=38&amp;desc=Infrastructure%20%26%20Electronics&amp;descAlignY=58&amp;descSize=18" alt="Yali Tal - Infrastructure and Electronics" width="100%" />
 
 <br />
 
 <a href="https://www.yali.website">
-  <img src="https://img.shields.io/badge/website-yali.website-2b4bff?style=for-the-badge&labelColor=1c1b18" alt="Website" />
+  <img src="https://img.shields.io/badge/website-yali.website-2b4bff?style=for-the-badge&amp;labelColor=1c1b18" alt="Website" />
 </a>
 <a href="https://www.yali.website/download_resume/">
-  <img src="https://img.shields.io/badge/download-live_pdf-f5f3ef?style=for-the-badge&labelColor=1c1b18&color=7a7568" alt="Download live PDF" />
+  <img src="https://img.shields.io/badge/download-live_pdf-f5f3ef?style=for-the-badge&amp;labelColor=1c1b18&amp;color=7a7568" alt="Download live PDF" />
 </a>
-<img src="https://img.shields.io/badge/built_with-Django-0C4B33?style=for-the-badge&labelColor=1c1b18" alt="Built with Django" />
-<img src="https://img.shields.io/badge/deployed_on-Vercel-000000?style=for-the-badge&labelColor=1c1b18" alt="Deployed on Vercel" />
+<img src="https://img.shields.io/badge/built_with-Django-0C4B33?style=for-the-badge&amp;labelColor=1c1b18" alt="Built with Django" />
+<img src="https://img.shields.io/badge/deployed_on-Vercel-000000?style=for-the-badge&amp;labelColor=1c1b18" alt="Deployed on Vercel" />
 
 <br />
 <br />
@@ -48,7 +48,7 @@ If I cannot explain how it works, I have not earned the right to run it.
     </td>
   </tr>
   <tr>
-    <td><strong>Service & Operations</strong><br /><sub>Niro Cafe · 2022-2024</sub></td>
+    <td><strong>Service &amp; Operations</strong><br /><sub>Niro Cafe · 2022-2024</sub></td>
     <td>
       Running a busy cafe floor taught me to stay calm when everything goes sideways at once.
       Turns out that skill travels well.
@@ -71,7 +71,7 @@ If I cannot explain how it works, I have not earned the right to run it.
       <p>Private cloud at home: Immich, AdGuard, containerised services, and a lot of learning through breakage.</p>
     </td>
     <td width="33%">
-      <h3>Horology & Modding</h3>
+      <h3>Horology &amp; Modding</h3>
       <p><code>Hardware precision</code></p>
       <p>Custom NH35 movement assembly and regulation. Tiny tolerances, patient hands, practical electronics mindset.</p>
     </td>
@@ -81,12 +81,12 @@ If I cannot explain how it works, I have not earned the right to run it.
 ## Stack
 
 <p>
-  <img src="https://img.shields.io/badge/Ubuntu_Server-E95420?style=flat-square&logo=ubuntu&logoColor=white" alt="Ubuntu Server" />
-  <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" alt="Docker" />
-  <img src="https://img.shields.io/badge/ESPHome-000000?style=flat-square&logo=esphome&logoColor=white" alt="ESPHome" />
-  <img src="https://img.shields.io/badge/Home_Assistant-41BDF5?style=flat-square&logo=homeassistant&logoColor=white" alt="Home Assistant" />
-  <img src="https://img.shields.io/badge/Django-092E20?style=flat-square&logo=django&logoColor=white" alt="Django" />
-  <img src="https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white" alt="Vercel" />
+  <img src="https://img.shields.io/badge/Ubuntu_Server-E95420?style=flat-square&amp;logo=ubuntu&amp;logoColor=white" alt="Ubuntu Server" />
+  <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&amp;logo=docker&amp;logoColor=white" alt="Docker" />
+  <img src="https://img.shields.io/badge/ESPHome-000000?style=flat-square&amp;logo=esphome&amp;logoColor=white" alt="ESPHome" />
+  <img src="https://img.shields.io/badge/Home_Assistant-41BDF5?style=flat-square&amp;logo=homeassistant&amp;logoColor=white" alt="Home Assistant" />
+  <img src="https://img.shields.io/badge/Django-092E20?style=flat-square&amp;logo=django&amp;logoColor=white" alt="Django" />
+  <img src="https://img.shields.io/badge/Vercel-000000?style=flat-square&amp;logo=vercel&amp;logoColor=white" alt="Vercel" />
   <img src="https://img.shields.io/badge/PC_Assembly-2b4bff?style=flat-square" alt="PC Assembly" />
   <img src="https://img.shields.io/badge/Soldering-7a7568?style=flat-square" alt="Soldering" />
 </p>
@@ -141,6 +141,6 @@ http://127.0.0.1:8000/download_resume/
 <br />
 <br />
 
-<img src="https://capsule-render.vercel.app/api?type=waving&height=90&section=footer&color=0:2b4bff,100:1c1b18" alt="" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=waving&amp;height=90&amp;section=footer&amp;color=0:2b4bff,100:1c1b18" alt="" width="100%" />
 
 </div>
