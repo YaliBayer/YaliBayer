@@ -1,23 +1,33 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&amp;height=220&amp;color=0:1c1b18,100:2b4bff&amp;text=Yali%20Tal&amp;fontColor=f5f3ef&amp;fontSize=58&amp;fontAlignY=38&amp;desc=Infrastructure%20%26%20Electronics&amp;descAlignY=58&amp;descSize=18" alt="Yali Tal - Infrastructure and Electronics" width="100%" />
+<sub>Infrastructure &amp; Electronics</sub>
 
-<br />
-
-<a href="https://www.yali.website">
-  <img src="https://img.shields.io/badge/website-yali.website-2b4bff?style=for-the-badge&amp;labelColor=1c1b18" alt="Website" />
-</a>
-<a href="https://www.yali.website/download_resume/">
-  <img src="https://img.shields.io/badge/download-live_pdf-f5f3ef?style=for-the-badge&amp;labelColor=1c1b18&amp;color=7a7568" alt="Download live PDF" />
-</a>
-<img src="https://img.shields.io/badge/built_with-Django-0C4B33?style=for-the-badge&amp;labelColor=1c1b18" alt="Built with Django" />
-<img src="https://img.shields.io/badge/deployed_on-Vercel-000000?style=for-the-badge&amp;labelColor=1c1b18" alt="Deployed on Vercel" />
+# Yali Tal
 
 <br />
 <br />
 
 <strong>A builder at heart.</strong><br />
 Navigating the intersection of hardware modding, network defense, and self-hosted systems.
+
+<br />
+
+<a href="https://www.yali.website"><strong>Website</strong></a>
+&nbsp;&nbsp;·&nbsp;&nbsp;
+<a href="https://www.yali.website/download_resume/"><strong>Live PDF</strong></a>
+&nbsp;&nbsp;·&nbsp;&nbsp;
+<strong>Django</strong>
+&nbsp;&nbsp;·&nbsp;&nbsp;
+<strong>Vercel</strong>
+
+<br />
+<br />
+
+<code>network defense</code>
+<code>linux servers</code>
+<code>docker</code>
+<code>electronics</code>
+<code>homelab</code>
 
 </div>
 
@@ -80,16 +90,7 @@ If I cannot explain how it works, I have not earned the right to run it.
 
 ## Stack
 
-<p>
-  <img src="https://img.shields.io/badge/Ubuntu_Server-E95420?style=flat-square&amp;logo=ubuntu&amp;logoColor=white" alt="Ubuntu Server" />
-  <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&amp;logo=docker&amp;logoColor=white" alt="Docker" />
-  <img src="https://img.shields.io/badge/ESPHome-000000?style=flat-square&amp;logo=esphome&amp;logoColor=white" alt="ESPHome" />
-  <img src="https://img.shields.io/badge/Home_Assistant-41BDF5?style=flat-square&amp;logo=homeassistant&amp;logoColor=white" alt="Home Assistant" />
-  <img src="https://img.shields.io/badge/Django-092E20?style=flat-square&amp;logo=django&amp;logoColor=white" alt="Django" />
-  <img src="https://img.shields.io/badge/Vercel-000000?style=flat-square&amp;logo=vercel&amp;logoColor=white" alt="Vercel" />
-  <img src="https://img.shields.io/badge/PC_Assembly-2b4bff?style=flat-square" alt="PC Assembly" />
-  <img src="https://img.shields.io/badge/Soldering-7a7568?style=flat-square" alt="Soldering" />
-</p>
+`Ubuntu Server` `Docker` `ESPHome` `Home Assistant` `Django` `Vercel` `PC Assembly` `Soldering`
 
 ## How The Resume PDF Works
 
@@ -137,10 +138,5 @@ http://127.0.0.1:8000/download_resume/
 <div align="center">
 
 <sub>built with curiosity</sub>
-
-<br />
-<br />
-
-<img src="https://capsule-render.vercel.app/api?type=waving&amp;height=90&amp;section=footer&amp;color=0:2b4bff,100:1c1b18" alt="" width="100%" />
 
 </div>
