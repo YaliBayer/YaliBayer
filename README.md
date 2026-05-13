@@ -16,9 +16,7 @@ Navigating the intersection of hardware modding, network defense, and self-hoste
 &nbsp;&nbsp;·&nbsp;&nbsp;
 <a href="https://www.yali.website/download_resume/"><strong>Live PDF</strong></a>
 &nbsp;&nbsp;·&nbsp;&nbsp;
-<strong>Django</strong>
-&nbsp;&nbsp;·&nbsp;&nbsp;
-<strong>Vercel</strong>
+
 
 <br />
 <br />
@@ -103,37 +101,6 @@ flowchart LR
     C --> D[/download_resume/]
     D --> E[Fresh PDF]
 ```
-
-## Repository Map
-
-```text
-core/
-  templates/resume.html   website resume content
-  views.py                homepage and download route
-  pdf.py                  dynamic styled PDF generator
-resume_project/
-  settings.py             Django settings
-  urls.py                 URL routes
-vercel.json               Vercel deployment config
-```
-
-## Local Development
-
-```bash
-python3 -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-python manage.py runserver
-```
-
-Open:
-
-```text
-http://127.0.0.1:8000/
-http://127.0.0.1:8000/download_resume/
-```
-
----
 
 <div align="center">
 
