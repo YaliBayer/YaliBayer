@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Yali Tal | Infrastructure & Electronics</title>
+  <title>Yali Tal</title>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -47,7 +47,7 @@
     }
 
     .eyebrow {
-      font-family: 'DM Mono', monospace;
+      font-family: -apple-system, BlinkMacSystemFont;
       font-size: 11px;
       letter-spacing: 3px;
       text-transform: uppercase;
@@ -419,10 +419,10 @@
 
   <!-- Hero -->
   <header>
-    <p class="eyebrow">Infrastructure & Electronics</p>
+    <p class="eyebrow">Cyber security &Electronics</p>
     <h1>Yali Tal</h1>
     <p class="bio">A builder at heart. Navigating the intersection of hardware modding, network defense, and self-hosted systems.</p>
-    <span class="age-note"><span class="age-dot"></span>20 years old &middot; still learning &middot; honest about it</span>
+    <span class="age-note"><span class="age-dot"></span>20 years old &middot; Soc analyst &middot; Hardware enthusiast</span>
     <div class="hero-actions">
       <a href="{% url 'download_resume' %}" class="download-link">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
@@ -581,9 +581,9 @@
 <script>
   // ── Terminal typewriter ──
   const lines = [
-    { cmd: 'uptime', out: ' 11:42:03 up 47 days, 3:19,  load: 0.08, 0.12, 0.10' },
-    { cmd: 'docker ps --format "{{.Names}}"', out: ' immich\n adguard-home\n home-assistant\n portainer' },
-    { cmd: 'cat /etc/motd', out: " still learning. that's the point." },
+    { cmd: 'whoami', out: 'yali, 20 years old, Soc analyst and hardware enthusiast' },
+    { cmd: 'cat /etc/motd', out: " Never stop learning." },
+    { cmd: 'docker ps --format "{{.Names}}"', out: ' immich, adguard-home, home-assistant' }
   ];
 
   let li = 0, ci = 0, typing = true;
