@@ -15,6 +15,17 @@ Navigating the intersection of hardware modding, network defense, and self-hoste
 <a href="https://www.yali.website"><strong>Website</strong></a>
 &nbsp;&nbsp;·&nbsp;&nbsp;
 <a href="https://www.yali.website/download_resume/"><strong>Live PDF</strong></a>
+&nbsp;&nbsp;·&nbsp;&nbsp;
+<a href="https://github.com/YaliBayer"><strong>GitHub</strong></a>
+&nbsp;&nbsp;·&nbsp;&nbsp;
+<a href="https://www.linkedin.com/in/yali-bayer"><strong>LinkedIn</strong></a>
+
+<br />
+<br />
+
+<a href="mailto:yalibayer@gmail.com">yalibayer@gmail.com</a>
+&nbsp;&nbsp;·&nbsp;&nbsp;
+<a href="tel:+972506697554">0506697554</a>
 
 <br />
 <br />

@@ -25,6 +25,7 @@ class ResumeContentParser(HTMLParser):
         "eyebrow": "subtitle",
         "bio": "body",
         "age-note": "meta",
+        "contact-link": "meta",
         "section-label": "section",
         "entry-title": "heading",
         "tag": "meta",

@@ -113,6 +113,28 @@
       margin-top: 28px;
     }
 
+    .contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 18px;
+      margin-top: 18px;
+      font-family: 'DM Mono', monospace;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .contact-link {
+      color: var(--muted);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .contact-link:hover {
+      color: var(--accent);
+      border-color: var(--accent);
+    }
+
     .download-link {
       display: inline-flex;
       align-items: center;
@@ -340,6 +362,8 @@
     }
     .contact-block .section-label { color: rgba(255,255,255,0.3); }
     .contact-block .section-label::after { background: rgba(255,255,255,0.08); }
+    .contact-block .contact-link { color: rgba(255,255,255,0.62); }
+    .contact-block .contact-link:hover { color: #fff; border-color: #fff; }
     .contact-lead {
       font-size: 15px;
       color: rgba(255,255,255,0.5);
@@ -419,10 +443,16 @@
 
   <!-- Hero -->
   <header>
-    <p class="eyebrow">Cyber security &Electronics</p>
+    <p class="eyebrow">Cyber security &amp; Electronics</p>
     <h1>Yali Tal</h1>
     <p class="bio">A builder at heart. Navigating the intersection of hardware modding, network defense, and self-hosted systems.</p>
     <span class="age-note"><span class="age-dot"></span>20 years old &middot; Soc analyst &middot; Hardware enthusiast</span>
+    <div class="contact-links" aria-label="Contact details">
+      <a class="contact-link" href="tel:+972506697554">0506697554</a>
+      <a class="contact-link" href="mailto:yalibayer@gmail.com">yalibayer@gmail.com</a>
+      <a class="contact-link" href="https://github.com/YaliBayer" target="_blank" rel="noopener">github.com/YaliBayer</a>
+      <a class="contact-link" href="https://www.linkedin.com/in/yali-bayer" target="_blank" rel="noopener">linkedin.com/in/yali-bayer</a>
+    </div>
     <div class="hero-actions">
       <a href="{% url 'download_resume' %}" class="download-link">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
@@ -557,6 +587,12 @@
   <div class="contact-block section" id="s-contact">
     <p class="section-label">Say hello</p>
     <p class="contact-lead">Whether you're building something interesting or just want to talk hardware — I'm around.</p>
+    <p class="contact-lead">
+      Phone: <a href="tel:+972506697554" class="contact-link">0506697554</a><br>
+      Email: <a href="mailto:yalibayer@gmail.com" class="contact-link">yalibayer@gmail.com</a><br>
+      GitHub: <a href="https://github.com/YaliBayer" class="contact-link" target="_blank" rel="noopener">github.com/YaliBayer</a><br>
+      LinkedIn: <a href="https://www.linkedin.com/in/yali-bayer" class="contact-link" target="_blank" rel="noopener">linkedin.com/in/yali-bayer</a>
+    </p>
     <form class="contact-form" method="post" action="">
       {% csrf_token %}
       <div class="form-field">
